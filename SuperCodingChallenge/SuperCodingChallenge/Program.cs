@@ -22,7 +22,7 @@ namespace SuperCodingChallenge
         {
             ChallengeProcessor<Tuple<List<int>, int>, int> processor = new ChallengeProcessor<Tuple<List<int>, int>, int>(
             ///ToDo: Set your own Solution Here:
-                new MySolution()
+                new TomSolution()
                 // Uncomment all other solutions
                 );
 
@@ -34,7 +34,7 @@ namespace SuperCodingChallenge
             // ###################################################
 
 
-            numChallenges = 10000;
+            numChallenges = 1000;
 
             currentChallenge = new Tuple<List<int>, int>[numChallenges];
             currentSolutions = new int[numChallenges];
@@ -53,10 +53,7 @@ namespace SuperCodingChallenge
 
             for (int i = 0; i < numChallenges; i++)
             {
-                processedSolutions[i] = processor.Process(
-                    new Tuple<List<int>, int>
-                    (new List<int>(currentChallenge[i].Item1), currentChallenge[i].Item2)
-                    );
+                processedSolutions[i] = processor.Process(currentChallenge[i]);
             }
 
             stopwatch.Stop();

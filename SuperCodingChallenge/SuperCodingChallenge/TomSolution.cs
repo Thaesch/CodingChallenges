@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SuperCodingChallenge
 {
-    class MySolution : Processable<Tuple<List<int>, int>, int>
+    class TomSolution : Processable<Tuple<List<int>, int>, int>
     {
         public int Process(Tuple<List<int>, int> input)
         {
