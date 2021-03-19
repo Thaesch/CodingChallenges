@@ -72,6 +72,7 @@ namespace SuperCodingChallenge
             }
 
             Print("Completed in: " + stopwatch.ElapsedMilliseconds + " milliseconds");
+            Print("Average process in: " + (stopwatch.ElapsedMilliseconds / (double)numChallenges) + " milliseconds");
             Print("Correct Answers: " + numCorrect);
             Print("Incorrect Answers: " + numFalse);
 
