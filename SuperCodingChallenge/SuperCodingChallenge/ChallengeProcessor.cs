@@ -9,9 +9,9 @@ namespace SuperCodingChallenge
     class ChallengeProcessor<T,V>
     {
 
-        private Processable<T, V> toProcess;
+        private IProcessable<T, V> toProcess;
 
-        public ChallengeProcessor(Processable<T, V> toProcess)
+        public ChallengeProcessor(IProcessable<T, V> toProcess)
         {
             this.toProcess = toProcess;
         }

@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace SuperCodingChallenge
 {
-    interface Processable<T, V>
+    interface IProcessable<T, V>
     {
-
-
         V Process(T input);
-
     }
 }
