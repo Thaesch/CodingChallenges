@@ -33,14 +33,14 @@ namespace SuperCodingChallenge
             // ###################################################
             // ###################################################
 
-
+            
             numChallenges = 1000;
 
             currentChallenge = new Tuple<List<int>, int>[numChallenges];
             currentSolutions = new int[numChallenges];
             processedSolutions = new int[numChallenges];
 
-            random = new Random();
+            random = new Random(6001);
 
             PopulateChallenge();
 
@@ -85,8 +85,8 @@ namespace SuperCodingChallenge
             for (int i = 0; i < numChallenges; i++)
             {
 
-                currentChallenge[i] = new Tuple<List<int>, int>(new List<int>(), random.Next(1, 50));
-                for (int l = 0; l < currentChallenge[i].Item2 + random.Next(0, 5000); l++)
+                currentChallenge[i] = new Tuple<List<int>, int>(new List<int>(), random.Next(1, (numChallenges + 1)));
+                for (int l = 0; l < numChallenges; l++)
                 {
                     currentChallenge[i].Item1.Add(random.Next(-250,251));
                 }
@@ -97,8 +97,13 @@ namespace SuperCodingChallenge
         private static int CalculateKthMaximum(List<int> input, int k)
         {
             List<int> tempList = new List<int>(input);
+            if (tempList.Count == 0) return -1000;
             tempList.Sort();
-            return tempList[tempList.Count - k];
+
+            if (k > tempList.Count)
+                return tempList[0];
+            else
+                return tempList[tempList.Count - k];
         }
 
         public static void Print(object message)
