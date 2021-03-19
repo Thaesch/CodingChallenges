@@ -34,19 +34,19 @@ namespace SuperCodingChallenge
             // ###################################################
 
             
-            numChallenges = 1000;
+            numChallenges = 100000;
 
             currentChallenge = new Tuple<List<int>, int>[numChallenges];
             currentSolutions = new int[numChallenges];
             processedSolutions = new int[numChallenges];
 
             random = new Random(6001);
-
             PopulateChallenge();
 
 
             int numCorrect = 0;
             int numFalse = 0;
+
 
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -86,8 +86,8 @@ namespace SuperCodingChallenge
             for (int i = 0; i < numChallenges; i++)
             {
 
-                currentChallenge[i] = new Tuple<List<int>, int>(new List<int>(), random.Next(1, (numChallenges + 1)));
-                for (int l = 0; l < numChallenges; l++)
+                currentChallenge[i] = new Tuple<List<int>, int>(new List<int>(), random.Next(1, (Math.Min(numChallenges, 1500) + 1)));
+                for (int l = 0; l < Math.Min(numChallenges, 1500); l++)
                 {
                     currentChallenge[i].Item1.Add(random.Next(-250,251));
                 }
