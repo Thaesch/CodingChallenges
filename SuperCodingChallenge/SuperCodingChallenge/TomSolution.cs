@@ -16,8 +16,9 @@ namespace SuperCodingChallenge
 
         private int CalculateKMaximum(List<int> inputList, int k)
         {
-            if (k > inputList.Count) return 0;
+            if (inputList.Count == 0) return -1000;
             inputList.Sort();
+            if (k > inputList.Count) return inputList[0];
             return inputList[inputList.Count - k];
         }
     }
