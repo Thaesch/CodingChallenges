@@ -1,6 +1,6 @@
 # CodingChallenges
 
-## Kth Maximum Rules
+## Kth Maximum Rules 19.03. - 27.03.
 
 Find the kth maximum of a list of n elements
 
