@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SuperCodingChallenge.Tom;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -12,9 +13,9 @@ namespace SuperCodingChallenge
 
         // Find k-tes Maximum
 
-        static Tuple<List<int>, int>[] currentChallenge;
-        static int[] currentSolutions;
-        static int[] processedSolutions;
+        static Tuple<List<int>, int> currentChallenge;
+        static int currentSolution;
+        static int processedSolution;
         static int numChallenges;
         static Random random;
 
@@ -23,6 +24,7 @@ namespace SuperCodingChallenge
             ChallengeProcessor<Tuple<List<int>, int>, int> processor = new ChallengeProcessor<Tuple<List<int>, int>, int>(
             ///ToDo: Set your own Solution Here:
                 new TomSolution()
+                //new SortSolution()
                 // Uncomment all other solutions
                 );
 
@@ -36,37 +38,28 @@ namespace SuperCodingChallenge
             
             numChallenges = 100000;
 
-            currentChallenge = new Tuple<List<int>, int>[numChallenges];
-            currentSolutions = new int[numChallenges];
-            processedSolutions = new int[numChallenges];
-
             random = new Random(6001);
-            PopulateChallenge();
-
 
             int numCorrect = 0;
             int numFalse = 0;
 
 
             Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-
+            Print("Processing...");
             for (int i = 0; i < numChallenges; i++)
             {
-                processedSolutions[i] = processor.Process(currentChallenge[i]);
-            }
+                PopulateChallenge(i);
+                stopwatch.Start();
+                processedSolution = processor.Process(currentChallenge);
+                stopwatch.Stop();
 
-            stopwatch.Stop();
-
-            for (int i = 0; i < numChallenges; i++)
-            {
-                if(currentSolutions[i] == processedSolutions[i])
+                if (currentSolution == processedSolution)
                 {
                     numCorrect++;
                 }
                 else
                 {
-                    Print("Solution " + (i + 1) + ": " + currentSolutions[i] + " your answer: " + processedSolutions[i]);
+                    Print("Solution " + (i + 1) + ": " + currentSolution + " your answer: " + processedSolution);
                     numFalse++;
                 }
             }
@@ -81,18 +74,14 @@ namespace SuperCodingChallenge
         }
 
 
-        private static void PopulateChallenge()
+        private static void PopulateChallenge(int numChallenge)
         {
-            for (int i = 0; i < numChallenges; i++)
+            currentChallenge = new Tuple<List<int>, int>(new List<int>(), random.Next(1, (Math.Min(numChallenges, 1500) + 1)));
+            for (int l = 0; l < Math.Min(numChallenges, 1500); l++)
             {
-
-                currentChallenge[i] = new Tuple<List<int>, int>(new List<int>(), random.Next(1, (Math.Min(numChallenges, 1500) + 1)));
-                for (int l = 0; l < Math.Min(numChallenges, 1500); l++)
-                {
-                    currentChallenge[i].Item1.Add(random.Next(-250,251));
-                }
-                currentSolutions[i] = CalculateKthMaximum(currentChallenge[i].Item1, currentChallenge[i].Item2);
+                currentChallenge.Item1.Add(random.Next(-250, 251));
             }
+            currentSolution = CalculateKthMaximum(currentChallenge.Item1, currentChallenge.Item2);
         }
 
         private static int CalculateKthMaximum(List<int> input, int k)
