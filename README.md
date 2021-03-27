@@ -35,52 +35,52 @@ This is followed by N - 1 lines. On the i-th line, there are 3 integers, Si, Fi 
 For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is the maximum number of cities you can go sightseeing in such that you can still arrive at city N by time Tf at the latest. If it is impossible to arrive at city N by time Tf, output Case #x: IMPOSSIBLE.
 
 ### Limits
-1 ≤ T ≤ 100.
-Time limit: 20 seconds per test set.
-Memory limit: 1GB.
+1 ≤ T ≤ 100.  
+Time limit: 20 seconds per test set.  
+Memory limit: 1GB.  
 
 
 #### Small dataset (Test set 1 - Visible)
-2 ≤ N ≤ 16.
-1 ≤ Si ≤ 5000.
-1 ≤ Fi ≤ 5000.
-1 ≤ Di ≤ 5000.
-1 ≤ Ts ≤ 5000.
-1 ≤ Tf ≤ 5000.
+2 ≤ N ≤ 16.  
+1 ≤ Si ≤ 5000.  
+1 ≤ Fi ≤ 5000.  
+1 ≤ Di ≤ 5000.  
+1 ≤ Ts ≤ 5000.  
+1 ≤ Tf ≤ 5000.  
 
 
 #### Large dataset (Test set 2 - Hidden)
-2 ≤ N ≤ 2000.
-1 ≤ Si ≤ 109.
-1 ≤ Fi ≤ 109.
-1 ≤ Di ≤ 109.
-1 ≤ Ts ≤ 109.
-1 ≤ Tf ≤ 109.
+2 ≤ N ≤ 2000.  
+1 ≤ Si ≤ 109.  
+1 ≤ Fi ≤ 109.  
+1 ≤ Di ≤ 109.  
+1 ≤ Ts ≤ 109.  
+1 ≤ Tf ≤ 109.  
 
 ### Sample
 **Input**
-4
-4 3 12
-3 2 1
-6 2 2
-1 3 2
-3 2 30
-1 2 27
-3 2 1
-4 1 11
-2 1 2
-4 1 5
-8 2 2
-5 10 5000
-14 27 31
-27 11 44
-30 8 20
-2000 4000 3
+4  
+4 3 12  
+3 2 1  
+6 2 2  
+1 3 2  
+3 2 30  
+1 2 27  
+3 2 1  
+4 1 11  
+2 1 2  
+4 1 5  
+8 2 2  
+5 10 5000  
+14 27 31  
+27 11 44  
+30 8 20  
+2000 4000 3  
 
 **Output:**
-Case #1: 2
-Case #2: 0
-Case #3: IMPOSSIBLE
-Case #4: 4
+Case #1: 2  
+Case #2: 0  
+Case #3: IMPOSSIBLE  
+Case #4: 4  
 
 In the first test case, you can go sightseeing in city 1, catching the bus leaving at time 3 and arriving at time 4. You can go sightseeing in city 2, leaving on the bus at time 8. When you arrive in city 3 at time 10 you immediately board the next bus and arrive in city 4 just in time at time 12.
