@@ -47,6 +47,11 @@
     <Compile Include="IProcessable.cs" />
     <Compile Include="Tom\SortSolution.cs" />
     <Compile Include="Tom\TomSolution.cs" />
+	<Compile Include="Marco\MarcoSolution.cs" />
+	<Compile Include="Marco\Tree.cs" />
+	<Compile Include="Marco\InsertionSortSolution.cs" />
+	<Compile Include="Marco\IKthMaxSolution.cs" />
+	<Compile Include="Marco\BinaryTreeSolution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
