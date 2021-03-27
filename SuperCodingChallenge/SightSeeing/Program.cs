@@ -69,7 +69,7 @@ namespace SightSeeing
             // ###################################################
 
 
-            numChallenges = 1;
+            numChallenges = 100000;
 
             random = new Random(6001);
 
@@ -129,8 +129,8 @@ namespace SightSeeing
 
         private static void PopulateChallenge(int currentChallengeIndex)
         {
-            currentChallenge = premadeChallenge[currentChallengeIndex];
-            currentSolution = premadeSolution[currentChallengeIndex];
+            currentChallenge = premadeChallenge[Math.Min(premadeChallenge.Length - 1, currentChallengeIndex)];
+            currentSolution = premadeSolution[Math.Min(premadeSolution.Length - 1, currentChallengeIndex)];
         }
 
 
