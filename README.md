@@ -58,7 +58,7 @@ Memory limit: 1GB.
 1 ≤ Tf ≤ 109.  
 
 ### Sample
-**Input**
+**Input**  
 4  
 4 3 12  
 3 2 1  
