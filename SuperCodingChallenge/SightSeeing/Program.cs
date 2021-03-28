@@ -23,7 +23,26 @@ namespace SightSeeing
 
         static void Main(string[] args)
         {
-            premadeChallenge = new int[1][,];
+            ChallengeProcessor<int[,], int[]> processor = new ChallengeProcessor<int[,], int[]>(
+                ///ToDo: Set your own Solution Here:
+                // Uncomment all other solutions
+                //new MarcoSolution()
+                new TomSolution()
+                );
+
+
+            // ###################################################
+            // ###################################################
+            // ########### Ignore everything else! ###############
+            // ###################################################
+            // ###################################################
+
+
+            numChallenges = 100;
+            random = new Random(6001);
+
+            premadeChallenge = new int[2][,];
+            premadeSolution = new int[2][];
             premadeChallenge[0] = new int[,]
             { 
                {4,0,0},
@@ -44,7 +63,6 @@ namespace SightSeeing
                 {30 ,8  ,20},
                 {2000, 4000, 3}
             };
-            premadeSolution = new int[1][];
             premadeSolution[0] = new int[4]
             {
                 2,
@@ -52,26 +70,29 @@ namespace SightSeeing
                 -1,
                 4
             };
-
-
-            ChallengeProcessor<int[,], int[]> processor = new ChallengeProcessor<int[,], int[]>(
-                ///ToDo: Set your own Solution Here:
-                // Uncomment all other solutions
-                new MarcoSolution()
-                //new TomSolution()
-                );
-
-
-            // ###################################################
-            // ###################################################
-            // ########### Ignore everything else! ###############
-            // ###################################################
-            // ###################################################
-
-
-            numChallenges = 100000;
-
-            random = new Random(6001);
+            premadeSolution[1] = new int[1] { 83 };
+            premadeChallenge[1] = new int[2001, 3];
+            for (int i = 0; i < 2001; i++)
+            {
+                if (i == 0)
+                {
+                    premadeChallenge[1][i, 0] = 1;
+                    premadeChallenge[1][i, 1] = 0;
+                    premadeChallenge[1][i, 2] = 0;
+                }
+                else if( i == 1)
+                {
+                    premadeChallenge[1][i, 0] = 2000;
+                    premadeChallenge[1][i, 1] = 15;
+                    premadeChallenge[1][i, 2] = 6250;
+                }
+                else
+                {
+                    premadeChallenge[1][i, 0] = 3;
+                    premadeChallenge[1][i, 1] = 2;
+                    premadeChallenge[1][i, 2] = 1;
+                }
+            }
 
             int numCorrect = 0;
             int numFalse = 0;
