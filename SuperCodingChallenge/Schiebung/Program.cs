@@ -1,30 +1,26 @@
-﻿using SightSeeing.Marco;
-using SightSeeing.Tom;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
-namespace SightSeeing
+namespace Schiebung
 {
     class Program
-    { 
-
-        static int[,] currentChallenge;
+    {
+        static Tuple<int[,], int> currentChallenge;
         static int[] currentSolution;
         static int[] processedSolution;
         static int numChallenges;
         static Random random;
 
-        static int[][,] premadeChallenge;
+        static Tuple<int[,], int>[] premadeChallenge;
         static int[][] premadeSolution;
 
         static void Main(string[] args)
         {
-            ChallengeProcessor<int[,], int[]> processor = new ChallengeProcessor<int[,], int[]>(
+            ChallengeProcessor<Tuple<int[,], int>, int[]> processor = new ChallengeProcessor<Tuple<int[,], int>, int[]>(
                 ///ToDo: Set your own Solution Here:
                 // Uncomment all other solutions
                 new MarcoSolution()
@@ -39,73 +35,20 @@ namespace SightSeeing
             // ###################################################
 
 
-            numChallenges = 1;
+            numChallenges = 3;
             random = new Random(6001);
 
-            premadeChallenge = new int[1][,];
-            premadeSolution = new int[1][];
-//            premadeChallenge[1] = new int[,]
-//{
-//                           {1,0,0},
-//                            {4  ,1  ,10},
-//                            {0  ,11  ,0},
-//                            {0  ,1  ,5},
-//                            {0  ,1  ,0}
-//};
-//            premadeSolution[1] = new int[]
-//            {
-//                            2
-//            };
-//            premadeChallenge[0] = new int[,]
-//            { 
-//               {4,0,0},
-//                {4  ,3  ,12},
-//                {3  ,2  ,1},
-//                {6  ,2  ,2},
-//                {1  ,3  ,2},
-//                {3  ,2  ,30},
-//                {1  ,2  ,27},
-//                {3  ,2  ,1},
-//                {4  ,1  ,11},
-//                {2  ,1  ,2},
-//                {4  ,1  ,5},
-//                {8  ,2  ,2},
-//                {5  ,10 ,5000},
-//                {14 ,27 ,31},
-//                {27 ,11 ,44},
-//                {30 ,8  ,20},
-//                {2000, 4000, 3}
-//            };
-//            premadeSolution[0] = new int[]
-//            {
-//                2,
-//                0,
-//                -1,
-//                4
-//            };
-            premadeSolution[0] = new int[1] { 160 };
-            premadeChallenge[0] = new int[2001, 3];
-            for (int i = 0; i < 2001; i++)
-            {
-                if (i == 0)
-                {
-                    premadeChallenge[0][i, 0] = 1;
-                    premadeChallenge[0][i, 1] = 0;
-                    premadeChallenge[0][i, 2] = 0;
-                }
-                else if (i == 1)
-                {
-                    premadeChallenge[0][i, 0] = 2000;
-                    premadeChallenge[0][i, 1] = 15;
-                    premadeChallenge[0][i, 2] = 6250;
-                }
-                else
-                {
-                    premadeChallenge[0][i, 0] = 3;
-                    premadeChallenge[0][i, 1] = 2;
-                    premadeChallenge[0][i, 2] = 1;
-                }
-            }
+            premadeChallenge = new Tuple<int[,], int>[3];
+            premadeSolution = new int[3][];
+
+            premadeChallenge[0] = new Tuple<int[,], int>(new int[3, 2] { { 3, 5 }, { 6, 2 }, { 7, 8 } }, 10);
+            premadeChallenge[1] = new Tuple<int[,], int>(new int[3, 2] { { 3, 5 }, { 6, 2 }, { 7, 8 } }, 17);
+            premadeChallenge[2] = new Tuple<int[,], int>(new int[3, 2] { { 3, 5 }, { 6, 2 }, { 7, 8 } }, 21);
+
+            premadeSolution[0] = new int[3] {0, 1, 0};
+            premadeSolution[1] = new int[3] {0, 0, 1};
+            premadeSolution[2] = new int[3] {0, 1, 0};
+
 
             int numCorrect = 0;
             int numFalse = 0;
@@ -136,7 +79,7 @@ namespace SightSeeing
             int averageElapsedSeconds = (int)((stopwatch.ElapsedMilliseconds / (double)numChallenges) / 1000);
             double averageElapsedMillis = (stopwatch.ElapsedMilliseconds / (double)numChallenges) % 1000;
 
-            Print("Completed in: " + elapsedSeconds + " seconds and " + elapsedMillis  + " milliseconds");
+            Print("Completed in: " + elapsedSeconds + " seconds and " + elapsedMillis + " milliseconds");
             Print("Average process in: " + averageElapsedSeconds + " seconds and " + averageElapsedMillis + " milliseconds");
             Print("Correct Answers: " + numCorrect);
             Print("Incorrect Answers: " + numFalse);
@@ -148,7 +91,7 @@ namespace SightSeeing
         private static string StringArray(int[] arrayToString)
         {
             string s = "";
-            for(int i = 0; i < arrayToString.Length; i++)
+            for (int i = 0; i < arrayToString.Length; i++)
             {
                 s += arrayToString[i] + " ";
             }
@@ -158,7 +101,7 @@ namespace SightSeeing
         private static bool CompareSolutions(int[] currentSolution, int[] processedSolution)
         {
             if (currentSolution.Length != processedSolution.Length) return false;
-            for(int i = 0; i < currentSolution.Length; i++)
+            for (int i = 0; i < currentSolution.Length; i++)
             {
                 if (currentSolution[i] != processedSolution[i])
                     return false;

@@ -101,16 +101,51 @@ namespace SightSeeing.Tom
 
         private int FindLowestBus(int minTime, int cityIndex)
         {
-            int nextTime = -1;
-            int mult = 0;
-            while(nextTime < minTime)
+            //int nextTime = -1;
+            //int mult = 0;
+            //while(nextTime < minTime)
+            //{
+            //    nextTime = 
+            //        currentCityData[cityIndex, 0] +
+            //        mult * currentCityData[cityIndex, 1];
+            //    mult++;
+            //}
+            //return nextTime;
+
+            //a*x + b
+            int a = currentCityData[cityIndex, 1];
+            int b = currentCityData[cityIndex, 0];
+            int currentTime = minTime;
+
+            if (currentTime <= b)
             {
-                nextTime = 
-                    currentCityData[cityIndex, 0] +
-                    mult * currentCityData[cityIndex, 1];
-                mult++;
+                return b;
             }
-            return nextTime;
+            int timeDiff = currentTime - b;
+            if (timeDiff % a == 0)
+            {
+                return currentTime;
+            }
+            // Next Bus Start
+            return timeDiff / a * a + a + b;
+
         }
+
+        private int CalculateNextBusTime(int currentTime, int a, int b)
+        {
+            //a*x + b
+            if (currentTime <= b)
+            {
+                return b;
+            }
+            int timeDiff = currentTime - b;
+            if (timeDiff % a == 0)
+            {
+                return currentTime;
+            }
+            // Next Bus Start
+            return timeDiff / a * a + a + b;
+        }
+
     }
 }
