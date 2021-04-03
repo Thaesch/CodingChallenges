@@ -38,16 +38,24 @@ namespace Schiebung
             numChallenges = 3;
             random = new Random(6001);
 
-            premadeChallenge = new Tuple<int[,], int>[3];
-            premadeSolution = new int[3][];
+            premadeChallenge = new Tuple<int[,], int>[7];
+            premadeSolution = new int[7][];
 
             premadeChallenge[0] = new Tuple<int[,], int>(new int[3, 2] { { 3, 5 }, { 6, 2 }, { 7, 8 } }, 10);
             premadeChallenge[1] = new Tuple<int[,], int>(new int[3, 2] { { 3, 5 }, { 6, 2 }, { 7, 8 } }, 17);
             premadeChallenge[2] = new Tuple<int[,], int>(new int[3, 2] { { 3, 5 }, { 6, 2 }, { 7, 8 } }, 21);
+            premadeChallenge[2] = new Tuple<int[,], int>(new int[2, 3] { { 1, 4, 5 }, { 2, 8, 3 } }, 1);
+            premadeChallenge[2] = new Tuple<int[,], int>(new int[2, 3] { { 1, 4, 5 }, { 2, 8, 3 } }, 3);
+            premadeChallenge[2] = new Tuple<int[,], int>(new int[2, 3] { { 1, 4, 5 }, { 2, 8, 3 } }, 7);
+            premadeChallenge[2] = new Tuple<int[,], int>(new int[2, 3] { { 1, 4, 5 }, { 2, 8, 3 } }, 20);
 
             premadeSolution[0] = new int[3] {0, 1, 0};
             premadeSolution[1] = new int[3] {0, 0, 1};
             premadeSolution[2] = new int[3] {0, 1, 0};
+            premadeSolution[2] = new int[2] {0, 0};
+            premadeSolution[2] = new int[2] {0, 0};
+            premadeSolution[2] = new int[2] {0, 1};
+            premadeSolution[2] = new int[2] {1, 0};
 
 
             int numCorrect = 0;
