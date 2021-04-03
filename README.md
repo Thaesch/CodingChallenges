@@ -84,3 +84,22 @@ Case #3: IMPOSSIBLE
 Case #4: 4  
 
 In the first test case, you can go sightseeing in city 1, catching the bus leaving at time 3 and arriving at time 4. You can go sightseeing in city 2, leaving on the bus at time 8. When you arrive in city 3 at time 10 you immediately board the next bus and arrive in city 4 just in time at time 12.
+
+## Was für ne Schiebung!
+
+Aufgabe finde eine Verschiebung v für die gilt |v| minimal und ex eine Quersumme q von den Spalten für M, so dass |q - k| miminal.  
+
+#### Input: Matrix M nxm, int k
+
+#### Output: int[] v
+
+### Beispiel:
+
+k = 17  
+
+(2 3 1 1 1 1 5  6) -> 7  
+(4 5 1 2 3 5 6  7) -> 0  
+(0 0 0 0 0 0 0  0) -> 0  
+|6 8 2 3 4 6 11 13|  
+
+Out: v {7,0,0}
