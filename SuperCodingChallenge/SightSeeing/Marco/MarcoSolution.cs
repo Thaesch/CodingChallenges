@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SightSeeing.Marco
@@ -10,7 +11,9 @@ namespace SightSeeing.Marco
     {
         public int[] Process(int[,] input)
         {
-            throw new NotImplementedException();
+            ISightSeeing solver = new TrivialSolver();
+
+            return solver.Process(input);
         }
     }
 }

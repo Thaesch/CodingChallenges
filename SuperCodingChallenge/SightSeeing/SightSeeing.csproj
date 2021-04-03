@@ -45,7 +45,12 @@
   <ItemGroup>
     <Compile Include="ChallengeProcessor.cs" />
     <Compile Include="IProcessable.cs" />
+    <Compile Include="Marco\ISightSeeing.cs" />
     <Compile Include="Marco\MarcoSolution.cs" />
+    <Compile Include="Marco\MatrixSolution.cs" />
+    <Compile Include="Marco\RecursiveSolution.cs" />
+    <Compile Include="Marco\TestSolution.cs" />
+    <Compile Include="Marco\TrivialSolver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tom\TomSolution.cs" />
