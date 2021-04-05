@@ -5,7 +5,6 @@
 Weekly challenges of general coding skills
 The average, maximum and minimum of the runtime is compared and the winner has won!
 
-The looser gets to choose the next challenge.
 
 ## Kth Maximum Rules 19.03. - 27.03.
 
