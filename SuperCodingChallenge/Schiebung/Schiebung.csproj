@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="ChallengeProcessor.cs" />
     <Compile Include="IProcessable.cs" />
+    <Compile Include="Marco\ISchiebung.cs" />
     <Compile Include="Marco\MarcoSolution.cs" />
+    <Compile Include="Marco\TrivialSolver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tom\TomSolution.cs" />

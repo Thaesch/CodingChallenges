@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Schiebung.Marco;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -34,8 +35,7 @@ namespace Schiebung
             // ###################################################
             // ###################################################
 
-
-            numChallenges = 7;
+            numChallenges = 1000000;
             random = new Random(6001);
 
             premadeChallenge = new Tuple<int[,], int>[7];
@@ -56,7 +56,6 @@ namespace Schiebung
             premadeSolution[4] = new int[2] {0, 0};
             premadeSolution[5] = new int[2] {0, 1};
             premadeSolution[6] = new int[2] {1, 0};
-
 
             int numCorrect = 0;
             int numFalse = 0;

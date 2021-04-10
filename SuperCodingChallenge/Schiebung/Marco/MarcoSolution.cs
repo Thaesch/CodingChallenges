@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Schiebung
+namespace Schiebung.Marco
 {
-    class MarcoSolution : IProcessable<Tuple<int[,], int>, int[]>
+    public class MarcoSolution : IProcessable<Tuple<int[,], int>, int[]>
     {
         public int[] Process(Tuple<int[,], int> input)
         {
-            throw new NotImplementedException();
+            ISchiebung solver = new TrivialSolver();
+
+            return solver.Process(input);
         }
     }
 }
