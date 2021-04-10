@@ -6,10 +6,10 @@ Weekly challenges of general coding skills
 The average, maximum and minimum of the runtime is compared and the winner has won!
 
 
-<details>
-<summary>
+<details>  
+<summary>  
 ## Kth Maximum Rules 19.03. - 27.03.
-</summary>
+</summary>  
 Find the kth maximum of a list of n elements
 
 if n  is 0 the solution is -1000
