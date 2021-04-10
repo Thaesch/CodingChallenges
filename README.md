@@ -126,14 +126,14 @@ Lösungen:
 <strong> :black_square_button: Vollständige Klammerung 10.4. - 24.4. </strong>
 </summary>
 Gegeben eine logische Formel als String. Gesucht ist die vollständige Klammerung der Formel.
-logische Operatoren: AND, OR, !, XOR, =>, <=>.
+logische Operatoren: AND, OR, !, XOR, =>, <=>.  
 
 
-Beispiel Formel: A AND B OR !(C OR D) => F
-Lösung: ((((A) AND (B)) OR (!(((C) OR (D))))) => (F))
+Beispiel Formel: A AND B OR !(C OR D) => F  
+Lösung: ((((A) AND (B)) OR (!(((C) OR (D))))) => (F))  
 
 
-_ OR _ = (( _ ) OR ( _ ))
-! _  = (! (_))
+_ OR _ = (( _ ) OR ( _ ))  
+! _  = (! (_))  
 
 </details>
