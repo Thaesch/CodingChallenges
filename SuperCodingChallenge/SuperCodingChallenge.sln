@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SightSeeing", "SightSeeing\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schiebung", "Schiebung\Schiebung.csproj", "{9EFEDEA4-FC2D-430D-9693-5157915FF23E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klammerung", "Klammerung\Klammerung.csproj", "{7A8199DD-DD32-4C60-8C93-EFC59AA7CF26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{9EFEDEA4-FC2D-430D-9693-5157915FF23E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EFEDEA4-FC2D-430D-9693-5157915FF23E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EFEDEA4-FC2D-430D-9693-5157915FF23E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A8199DD-DD32-4C60-8C93-EFC59AA7CF26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A8199DD-DD32-4C60-8C93-EFC59AA7CF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A8199DD-DD32-4C60-8C93-EFC59AA7CF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A8199DD-DD32-4C60-8C93-EFC59AA7CF26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
