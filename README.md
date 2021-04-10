@@ -8,8 +8,8 @@ The average, maximum and minimum of the runtime is compared and the winner has w
 
 <details>
 <summary>
-<strong> Kth Maximum Rules 19.03. - 27.03. </strong>
-</summary>  
+<strong> :white_square_button: Kth Maximum Rules 19.03. - 27.03. </strong>
+</summary>
 Find the kth maximum of a list of n elements
 
 if n  is 0 the solution is -1000
@@ -125,15 +125,15 @@ Lösungen:
 <summary>
 <strong> Vollständige Klammerung 10.4. - 17.4. </strong>
 </summary>
-Gegeben eine logische Formel als String. Gesucht ist die vollständige Klammerung der Formel.  
-logische Operatoren: AND, OR, !, XOR, =>, <=>.  
-  
-
-Beispiel Formel: A AND B OR !(C OR D) => F  
-Lösung: ((((A) AND (B)) OR (!(((C) OR (D))))) => (F))  
+Gegeben eine logische Formel als String. Gesucht ist die vollständige Klammerung der Formel.
+logische Operatoren: AND, OR, !, XOR, =>, <=>.
 
 
-_ OR _ = (( _ ) OR ( _ ))  
-! _  = (! (_))  
+Beispiel Formel: A AND B OR !(C OR D) => F
+Lösung: ((((A) AND (B)) OR (!(((C) OR (D))))) => (F))
+
+
+_ OR _ = (( _ ) OR ( _ ))
+! _  = (! (_))
 
 </details>
