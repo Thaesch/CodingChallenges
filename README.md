@@ -8,7 +8,7 @@ The average, maximum and minimum of the runtime is compared and the winner has w
 
 <details>  
 <summary>  
-<h2> Kth Maximum Rules 19.03. - 27.03. </h2>
+<strong> Kth Maximum Rules 19.03. - 27.03. </strong>
 </summary>  
 Find the kth maximum of a list of n elements
 
