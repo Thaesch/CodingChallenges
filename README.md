@@ -8,8 +8,8 @@ The average, maximum and minimum of the runtime is compared and the winner has w
 
 <details>
 <summary>
-## Kth Maximum Rules 19.03. - 27.03.
-</summary>
+<strong> Kth Maximum Rules 19.03. - 27.03. </strong>
+</summary>  
 Find the kth maximum of a list of n elements
 
 if n  is 0 the solution is -1000
@@ -17,7 +17,7 @@ if k is bigger than n find the minimum of the list
 </details>
 <details>
 <summary>
-## Sightseeing (Google Kickstart 2017 - Round D - Problem 1) 27.3. - 3.4.
+<strong> Sightseeing (Google Kickstart 2017 - Round D - Problem 1) 27.3. - 3.4. </strong>
 </summary>
 When you travel, you like to spend time sightseeing in as many cities as possible, but sometimes you might not be able to because you need to catch the bus to the next city. To maximize your travel enjoyment, you decide to write a program to optimize your schedule.
 
@@ -90,7 +90,7 @@ In the first test case, you can go sightseeing in city 1, catching the bus leavi
 </details>
 <details>
 <summary>
-## Was für ne Schiebung!
+<strong> Was für ne Schiebung! 03.4.- 10.4.  </strong>
 </summary>
 Aufgabe finde eine Verschiebung v für die gilt |v| minimal und ex eine Quersumme q von den Spalten für M, so dass |q - k| miminal.
 
@@ -123,15 +123,17 @@ Lösungen:
 </details>
 <details open>
 <summary>
-## Vollständige Klammerung 10.4. - 17.4.
+<strong> Vollständige Klammerung 10.4. - 17.4. </strong>
 </summary>
-Gegeben eine logische Formel als String. Gesucht ist die vollständige Klammerung der Formel.
-logische Operatoren: AND, OR, !, XOR, =>, <=>.
+Gegeben eine logische Formel als String. Gesucht ist die vollständige Klammerung der Formel.  
+logische Operatoren: AND, OR, !, XOR, =>, <=>.  
+  
 
-Beispiel Formel: A AND B OR !(C OR D) => F
-Lösung: ((((A) AND (B)) OR (!(((C) OR (D))))) => (F))
+Beispiel Formel: A AND B OR !(C OR D) => F  
+Lösung: ((((A) AND (B)) OR (!(((C) OR (D))))) => (F))  
 
-_ OR _ = (( _ ) OR ( _ ))
+
+_ OR _ = (( _ ) OR ( _ ))  
 ! _  = (! (_))  
 
 </details>
