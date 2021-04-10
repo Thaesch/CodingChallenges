@@ -125,7 +125,7 @@ Lösungen:
 <summary>
 <strong> :black_square_button: Vollständige Klammerung 10.4. - 24.4. </strong>
 </summary>
-Gegeben eine logische Formel als String. Gesucht ist die vollständige Klammerung der Formel.  
+Gegeben eine logische Formel als String. Gesucht ist die vollständige Klammerung der Formel.     
 logische Operatoren: AND, OR, !, XOR, =>, <=>.  
 
 
