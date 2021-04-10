@@ -127,9 +127,11 @@ Lösungen:
 </summary>
 Gegeben eine logische Formel als String. Gesucht ist die vollständige Klammerung der Formel.  
 logische Operatoren: AND, OR, !, XOR, =>, <=>.  
+  
 
 Beispiel Formel: A AND B OR !(C OR D) => F  
 Lösung: ((((A) AND (B)) OR (!(((C) OR (D))))) => (F))  
+
 
 _ OR _ = (( _ ) OR ( _ ))  
 ! _  = (! (_))  
