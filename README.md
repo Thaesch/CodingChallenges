@@ -6,8 +6,8 @@ Weekly challenges of general coding skills
 The average, maximum and minimum of the runtime is compared and the winner has won!
 
 
-<details>  
-<summary>  
+<details>
+<summary>
 <strong> Kth Maximum Rules 19.03. - 27.03. </strong>
 </summary>  
 Find the kth maximum of a list of n elements
@@ -17,7 +17,7 @@ if k is bigger than n find the minimum of the list
 </details>
 <details>
 <summary>
-<h2> Sightseeing (Google Kickstart 2017 - Round D - Problem 1) 27.3. - 3.4.</h2>
+<strong> Sightseeing (Google Kickstart 2017 - Round D - Problem 1) 27.3. - 3.4. </strong>
 </summary>
 When you travel, you like to spend time sightseeing in as many cities as possible, but sometimes you might not be able to because you need to catch the bus to the next city. To maximize your travel enjoyment, you decide to write a program to optimize your schedule.
 
@@ -90,7 +90,7 @@ In the first test case, you can go sightseeing in city 1, catching the bus leavi
 </details>
 <details>
 <summary>
-<h2> Was für ne Schiebung! 03.4.- 10.4.  </h2>
+<strong> Was für ne Schiebung! 03.4.- 10.4.  </strong>
 </summary>
 Aufgabe finde eine Verschiebung v für die gilt |v| minimal und ex eine Quersumme q von den Spalten für M, so dass |q - k| miminal.
 
@@ -123,7 +123,7 @@ Lösungen:
 </details>
 <details open>
 <summary>
-<h2> Vollständige Klammerung 10.4. - 17.4. </h2>
+<strong> Vollständige Klammerung 10.4. - 17.4. </strong>
 </summary>
 Gegeben eine logische Formel als String. Gesucht ist die vollständige Klammerung der Formel.
 logische Operatoren: AND, OR, !, XOR, =>, <=>.
