@@ -140,7 +140,11 @@ _ OR _ = (( _ ) OR ( _ ))
 </details>
 
 <details open>
-  32 Sitze
+    <summary>
+        <strong> :white_square_button: Optimales Corona Kino </strong>
+    </summary>
+  
+32 Sitze
 18 Leute
 
 reihen 
@@ -149,4 +153,5 @@ sind 8 plätze
 
 Jeder rechte Sitzpartner gibt 1 Penalty
 Jeder vordere Sitzpartner gibt 1 Penalty
+
 </details>
