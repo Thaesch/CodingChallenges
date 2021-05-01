@@ -121,7 +121,7 @@ Lösungen:
 7:  (0, 1)
 20: (1, 0)
 </details>
-<details open>
+<details>
 <summary>
 <strong> :black_square_button: Vollständige Klammerung 10.4. - 24.4. </strong>
 </summary>
@@ -137,4 +137,16 @@ logische Operatoren: AND, OR, !, XOR, =>, <=>.
 _ OR _ = (( _ ) OR ( _ ))  
 ! _  = (! (_))  
 
+</details>
+
+<details open>
+  32 Sitze
+18 Leute
+
+reihen 
+sind 8 plätze
+4 reihen
+
+Jeder rechte Sitzpartner gibt 1 Penalty
+Jeder vordere Sitzpartner gibt 1 Penalty
 </details>
